@@ -54,6 +54,10 @@ public class main {
 
     public static void main(String[] args) {
 
+        /*
+        TODO: Enter your own files into the following variables: file1 and file2
+        */
+
         File file2 = new File ("C:\\Users\\fauza\\Desktop\\School stuff\\Elements of Software Construction\\Software Testing Campaign\\Software-Testing-Campaign\\sample_file_3.csv");
         File file1 = new File ("C:\\Users\\fauza\\Desktop\\School stuff\\Elements of Software Construction\\Software Testing Campaign\\Software-Testing-Campaign\\sample_file_1.csv");
         try {
