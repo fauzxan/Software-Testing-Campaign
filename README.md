@@ -1,1 +1,19 @@
 # Software-Testing-Campaign
+
+### Steps to download:
+<br />
+1. Make a copy of the file on your local device: <br />
+<t /><t /> a. Clone the repository using github Desktop or command line<br />
+<t /><t /> a. Download the zip file and extract the folder into a folder of your choice<br />
+<br />
+2. Open the code in your IDE. The code consists of a single class-  main.java<br />
+3. In order to test the code you need to input the correct file path into the file1 and file2 variables in public static void main(String args[])<br />
+<bold> You only need to modify these two lines in ./src/main.java</bold>
+```
+File file1 = new File("__enter filepath for the CSV file you want to test__");
+File file2 = new File("__enter filepath for the CSV file you want to test__");
+```
+
+<br />
+4. Run the code and see the output terminal to see how many lines are mismatched<br />
+5. Open the folder where you extracted the files to see the output stored in output.csv
