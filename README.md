@@ -19,9 +19,8 @@ File file2 = new File("__enter filepath for the second CSV file you want to test
 <br />
 <br />
 4. Run the code and see the output terminal to see how many lines are mismatched<br /><br />
-5. Open the folder where you extracted the files to see the output stored in output.csv<br /><br />
-<br />
-<br />
+5. Open the folder where you extracted the files to see the output stored in output.csv
+
 ### Use case and Misuse case diagram
 ##### You can view these in the following directory:
 ./Use cases_and_Misuse cases
