@@ -12,8 +12,8 @@
 ##### You only need to modify these two lines in ./src/main.java
 
 ```
-File file1 = new File("__enter filepath for the CSV file you want to test__");
-File file2 = new File("__enter filepath for the CSV file you want to test__");
+File file1 = new File("__enter filepath for the first CSV file you want to test__");
+File file2 = new File("__enter filepath for the second CSV file you want to test__");
 ```
 
 <br />
