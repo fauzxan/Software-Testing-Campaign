@@ -1,6 +1,6 @@
 # Software-Testing-Campaign
 
-##### The code has been well documented, with comments and steps taken to improve time complexity! Pls go through it if you wish to :)
+##### The code has been well documented, with comments and steps taken to improve time complexity :)
 
 ### Steps to view functionality:
 <br />
