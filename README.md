@@ -1,5 +1,7 @@
 # Software-Testing-Campaign
 
+##### The code has been well documented, with comments and steps taken to improve time complexity! Pls go through it if you wish to :)
+
 ### Steps to view functionality:
 <br />
 1. Make a copy of the file on your local device: <br />
