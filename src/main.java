@@ -1,55 +1,80 @@
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class main {
 
-    public static void compareInputs(File file1, File file2) throws Exception{
-        Scanner sc1 = new Scanner(file1);
-        Scanner sc2 = new Scanner(file2);
+    public static HashMap<String, String> createHash(File file) throws Exception{ //  this method has a time complexity of O(n), where n is the number of entries in the one of the files
+        HashMap<String, String> entry = new HashMap<>();
+        Scanner sc = new Scanner(file);
+        while (sc.hasNext()){
+            String line = sc.next();
+            // Key: is the ID of each row- this is the unique identifier
+            // Value: the entire line to be compared
+            entry.put(line.split(",")[0], line);
+        }
+        sc.close();
+        return entry;
+    }
 
+    public static void compareInputs(File file1, File file2) throws Exception{
         File file = new File ("./output.csv");
         FileWriter fileWriter = new FileWriter(file);
+
+        // you still need header in the second file
         String header = "Customer ID#,Account No.,Currency,Type,Balance\n";
         fileWriter.append(header);
 
+        // some non-important variables, used to display some cool stats!
         int count = 0;
         int lineNumber = -1;
+        int numberOfIterations = 0;
 
-        while(sc1.hasNext() && sc2.hasNext()){
+        // creation of hashmap for quick retrieval of entries
+        // the creation of hashmap is purely to improve time complexity.
+        // accessing and checking elements takes O(1) time.
+        // other method includes brute force search
+        // If you are interested in the brute force search, then you can have a look at the previous commits- namely draft1 and draft2
+        HashMap<String, String> file1Entries = createHash(file1);
 
-            // read the respective lines
-            // I am making use of line and line.split() separately because:
-            // 1. line1 will be directly appended into the fileWriter
-            // 2. line1Split will be used for comparison
-            String line1 = sc1.next();
-            String[] line1Split = line1.split(",");
-            String line2 = sc2.next();
-            String[] line2Split = line2.split(",");
+        Scanner sc2 = new Scanner(file2);
+        while (sc2.hasNext()){
+            String lineFromSecondFile = sc2.next();
+            String lineKey = lineFromSecondFile.split(",")[0]; // basically the ID, which uniquely identifies each row
 
-            // compare each line to see if they are different
-            if (line1Split[line1Split.length-1].compareTo(line2Split[line2Split.length-1]) != 0) { // checking to see if the last letter of each line does not match
-                System.out.println("\nMismatch on line " + lineNumber+ "!");
-                System.out.println("Mismatched line (also appended into output.csv): " + line1);
-                count++; // number of mismatches
-                // adding an extra line for legibility!
-                fileWriter.append("\n");
-                fileWriter.append(line1);
-                fileWriter.append("\n");
+            // checking if the key even exists on the other file
+            if (!file1Entries.containsKey(lineKey)){
+                System.out.println("\nKey "+ lineKey+ " does not exist in the second file at all! Therefore, it's not even a mismatch lmao so I cannot put it into the new file even\n");
+                break;
             }
-
-            lineNumber++;// line number to indicate the line on which the mismatch occured
+            // if the key does exist, then...
+            else {
+                // ...check if the entries match. If they do, then append it into the new csv file.
+                String lineFromHashMap = file1Entries.get(lineKey);
+                if (!lineFromHashMap.equals(lineFromSecondFile)){
+                    // multiple \n included to improve legibility
+                    fileWriter.append("\n");
+                    fileWriter.append(lineFromSecondFile);
+                    fileWriter.append("\n");
+                    fileWriter.append(lineFromHashMap);
+                    fileWriter.append("\n");
+                    System.out.println("\nMismatched line on row "+ lineNumber + " of the second file entered!\n" + lineFromSecondFile + "\n and \n"+ lineFromHashMap);
+                    count++;
+                }
+            }
+            numberOfIterations++;
+            lineNumber++;
         }
-
+        sc2.close();
         // to gauge how many lines are not matching
         System.out.println("\nNumber of mismatches: " + count);
-
+        System.out.println("\nNumber of iterations: "+ numberOfIterations);
         //closing statements
         fileWriter.flush();
         fileWriter.close();
-        sc1.close();
-        sc2.close();
+
     }
 
     public static void main(String[] args) {
