@@ -8,6 +8,7 @@
 <br />
 2. Open the code in your IDE. The code consists of a single class-  main.java<br /><br />
 3. In order to test the code you need to input the correct file path into the file1 and file2 variables in public static void main(String args[])<br />
+
 ##### You only need to modify these two lines in ./src/main.java
 
 ```
