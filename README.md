@@ -52,6 +52,6 @@ File file2 = new File("__enter filepath for the second CSV file you want to test
 ##### 2. Data Types 
 |   |Invalid   |Valid   |   
 |---|----------|--------|
-|Middle value| file1 contains a row "ID1", "BOS963211", $US , savings, 304932 <br/> and file2's corresponding row "ID1", "BOS963211", USD , "savings", 30493dc |"ID1", "BOS963211", "USD" , "SAVINGS", "304932"|
-|Boundary value|file 1 contains "ID1", "BOS963211", "USD" , "SAVINGS", 304932 <br /> and file 2's corresponding row contains "ID1", "BOS963211", "USD" , "SAVINGS", "304932"|same as above|
+|Middle value| file1 contains a row "ID1", "BOS963211", $US , savings, 304932  and file2's corresponding row "ID1", "BOS963211", USD , "savings", 30493dc |"ID1", "BOS963211", "USD" , "SAVINGS", "304932"|
+|Boundary value|file 1 contains "ID1", "BOS963211", "USD" , "SAVINGS", 304932  and file 2's corresponding row contains "ID1", "BOS963211", "USD" , "SAVINGS", "304932"|same as above|
 |Reason|The data type of the two corresponding rows in the two files must match. One cannot be of String type while the other is of Number type (Excel data types)||
