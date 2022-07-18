@@ -37,3 +37,7 @@ File file2 = new File("__enter filepath for the second CSV file you want to test
 |1  |          |        |   
 |2  |          |        |      
 |3  |          |        |     
+
+
+### Boundary class
+![2](https://user-images.githubusercontent.com/92146562/179461892-3af0d6a1-697c-424d-87db-d17e194ad1d2.jpg)
