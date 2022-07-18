@@ -34,10 +34,10 @@ File file2 = new File("__enter filepath for the second CSV file you want to test
 ### Equivalence class partitioning 
 |   |Invalid   |Valid   |   
 |---|----------|--------|
-|1  |          |        |   
-|2  |          |        |      
-|3  |          |        |     
+|Path to csv file | Path is entered incorrectly | Path must be entered correctly: 'pathtodir//csvfilename.csv' (including the escape sequence for the forward slash) | 
+|Data types in csv file |Data type of a cell is incorrect/ different from the data type of the corresponding cell in file2|All data types must be of string type|      
+|Header row in both the files|Header row!= ["Customer ID#","Account Number", "Currency", "Type", "Balance"]|Header row == ["Customer ID#","Account Number", "Currency", "Type", "Balance"]|     
+|Cutomer ID #|-| Customer ID must be unique within a given file and must have a corresponding copy in the other file|
 
+### Boundary value analysis
 
-### Boundary class
-![2](https://user-images.githubusercontent.com/92146562/179461892-3af0d6a1-697c-424d-87db-d17e194ad1d2.jpg)
