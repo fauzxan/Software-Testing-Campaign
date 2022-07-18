@@ -1,5 +1,5 @@
 # Software-Testing-Campaign
-
+## Week 8
 #### Student ID: 1005404
 #### Done by Mohammed Fauzaan, Cohort 4
 
@@ -31,6 +31,8 @@ File file2 = new File("__enter filepath for the second CSV file you want to test
 ./Use cases_and_Misuse cases
 <br/>
 
+## Week 9
+
 ### Equivalence class partitioning 
 |   |Invalid   |Valid   |   
 |---|----------|--------|
@@ -40,4 +42,16 @@ File file2 = new File("__enter filepath for the second CSV file you want to test
 |Cutomer ID #|-| Customer ID must be unique within a given file and must have a corresponding copy in the other file|
 
 ### Boundary value analysis
-
+1. Path to CSV file
+|   |Invalid   |Valid   |   
+|---|----------|--------|
+|Middle value|File file1 = "abc.exs/DEsktoP/%xyz//csv.csv"| File file1 = "C://Users//%USERNAME//file1.csv"|
+|Boundary value|File file1 = "C:/Users/%USERNAME%/file1.csv"| Same as above|
+|Reason|The file name entered is of String format, so the forward slashes must be use escape character as "//". Also the path and file name should be correct and should exist as a real directory|-|
+<br />
+2. Data Types 
+|   |Invalid   |Valid   |   
+|---|----------|--------|
+|Middle value| file1 contains a row "ID1", "BOS963211", $US , savings, 304932 <br/> and file2's corresponding row "ID1", "BOS963211", USD , "savings", 30493dc |"ID1", "BOS963211", "USD" , "SAVINGS", "304932"|
+|Boundary value|||
+|Reason|||
