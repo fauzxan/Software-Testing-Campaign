@@ -29,3 +29,11 @@ File file2 = new File("__enter filepath for the second CSV file you want to test
 ### Use case and Misuse case diagram
 ##### You can view these in the following directory:
 ./Use cases_and_Misuse cases
+<br/>
+
+### Equivalence class partitioning 
+|   |Invalid   |Valid   |   
+|---|----------|--------|
+|1  |          |        |   
+|2  |          |        |      
+|3  |          |        |     
