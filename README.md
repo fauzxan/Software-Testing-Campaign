@@ -42,7 +42,7 @@ File file2 = new File("__enter filepath for the second CSV file you want to test
 |Cutomer ID #|-| Customer ID must be unique within a given file and must have a corresponding copy in the other file|
 
 ### Boundary value analysis
-1. Path to CSV file<br />
+
 |   |Invalid   |Valid   |   
 |---|----------|--------|
 |Middle value|File file1 = "abc.exs/DEsktoP/%xyz//csv.csv"| File file1 = "C://Users//%USERNAME//file1.csv"|
