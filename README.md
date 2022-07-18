@@ -48,10 +48,9 @@ File file2 = new File("__enter filepath for the second CSV file you want to test
 |Middle value|File file1 = "abc.exs/DEsktoP/%xyz//csv.csv"| File file1 = "C://Users//%USERNAME//file1.csv"|
 |Boundary value|File file1 = "C:/Users/%USERNAME%/file1.csv"| Same as above|
 |Reason|The file name entered is of String format, so the forward slashes must be use escape character as "//". Also the path and file name should be correct and should exist as a real directory|-|
-<br />
 ##### 2. Datatypes 
 |   |Invalid   |Valid   |   
 |---|----------|--------|
-|Middle value| file1 contains a row "ID1", "BOS963211", $US , savings, 304932  and file2's corresponding row "ID1", "BOS963211", USD , "savings", 30493dc |"ID1", "BOS963211", "USD" , "SAVINGS", "304932"|
-|Boundary value|file 1 contains "ID1", "BOS963211", "USD" , "SAVINGS", 304932  and file 2's corresponding row contains "ID1", "BOS963211", "USD" , "SAVINGS", "304932"|same as above|
+|Middle value| file1 contains a row ["ID1", "BOS963211", $US , savings, 304932]  and file2's corresponding row ["ID1", "BOS963211", USD , "savings", 30493dc] |Both files should contain rows of the following type: ["ID1", "BOS963211", "USD" , "SAVINGS", "304932"]|
+|Boundary value|file 1 contains ["ID1", "BOS963211", "USD" , "SAVINGS", 304932]  and file 2's corresponding row contains ["ID1", "BOS963211", "USD" , "SAVINGS", "304932"]|same as above|
 |Reason|The data type of the two corresponding rows in the two files must match. One cannot be of String type while the other is of Number type (Excel data types)||
