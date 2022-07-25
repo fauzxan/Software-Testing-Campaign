@@ -55,7 +55,6 @@ public class main {
                 String lineFromHashMap = file1Entries.get(lineKey);
                 if (!lineFromHashMap.equals(lineFromSecondFile)){
                     // multiple \n included to improve legibility
-                    fileWriter.append("\n");
                     fileWriter.append(lineFromSecondFile);
                     fileWriter.append("\n");
                     fileWriter.append(lineFromHashMap);
