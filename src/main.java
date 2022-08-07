@@ -20,7 +20,12 @@ public class main {
                 // System.out.println(line);
                 // Key: is the ID of each row- this is the unique identifier
                 // Value: the entire line to be compared
-                entry.put(line.split(",")[0], line);
+                try {
+                    entry.put(line.split(",")[0], line);
+                }
+                catch(Exception err){
+                    System.out.println(err);
+                }
             }
 
         }
@@ -49,10 +54,11 @@ public class main {
         HashMap<String, String> file1Entries = createHash(file1);
 
         Scanner sc2 = new Scanner(file2);
+        for (int explainLater = 0; explainLater<3; explainLater++){
+            sc2.next();
+        }
         while (sc2.hasNext()){
-            for (int explainLater = 0; explainLater<3; explainLater++){
-                sc2.next();
-            }
+
             String lineFromSecondFile = sc2.next();
             String lineKey = lineFromSecondFile.split(",")[0]; // basically the ID, which uniquely identifies each row
 
@@ -100,6 +106,7 @@ public class main {
             int num = compareInputs(file1, file2);
         }catch(Exception e){
             System.out.println("either file not found or the file 'output.csv' is open in another tab!");
+            System.out.println(e);
         }
     }
 }

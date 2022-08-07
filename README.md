@@ -66,3 +66,13 @@ File file2 = new File("__enter filepath for the second CSV file you want to test
 |Middle value| All the rows have the same Customer ID# value| Each customer has a unique customer ID|
 |Boundary value| Customer ID value from two differnt rows of the same file matches. E.g., two rows have Customer ID# = ID23| Must be different|
 |Reason|My implementation makes use of a Hash Map, so the Customer ID# needs to be unique| - |
+
+## Fuzzer implementation
+##### What does the fuzzer output?
+The fuzzer's output is an input csv whose rows contain ID number, followed by a randomly generated line. <br/>
+##### What does the fuzzer test?
+The test is as follows: <br/>
+There is a method called mutateCSV(File file, int errno): this method mutates a maximum of "n" fields in the input csv, where 
+n = errno. The method also keeps track of the number of mutations created (because the errno only provides the upper bound on the number of mutations, not the exact amount) <br/>
+If at any point, the number of mutations is not equal to the number of mismatches, flag will be set to 1, and an <br/>
+error message will be printed out at the end of fuzzer method.  

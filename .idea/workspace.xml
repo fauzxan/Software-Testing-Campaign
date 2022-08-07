@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef14b26e-7287-4f53-9df4-b9b50fdb54f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/input.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Fuzzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.csv" beforeDir="false" afterPath="$PROJECT_DIR$/input.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fuzzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fuzzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,9 +54,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Application.main">
-    <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main" />
+  <component name="RunManager" selected="Application.Fuzzer">
+    <configuration name="Fuzzer" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Fuzzer" />
       <module name="Software-Testing-Campaign" />
       <option name="PROGRAM_PARAMETERS" value="'C:\Users\fauza\Desktop\School stuff\Elements of Software Construction\Software Testing Campaign\sample_file_3.csv'$FileDir$" />
       <method v="2">
@@ -111,7 +114,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.main" />
+      <item itemvalue="Application.Fuzzer" />
       <item itemvalue="JUnit.Tests.checkDT" />
       <item itemvalue="JUnit.Tests.checkOutput" />
       <item itemvalue="JUnit.Tests.checkUniqueCustomerIds" />
@@ -157,9 +160,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Fuzzer.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

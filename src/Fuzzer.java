@@ -54,6 +54,10 @@ public class Fuzzer {
                 }
             }
         }
+        sc.close();
+        fileWriter.flush();
+        fileWriter.close();
+
         return numMutations;
 
 
@@ -68,21 +72,27 @@ public class Fuzzer {
 
         int flag = 0;
 
-        for (int i= 0 ; i< 5; i++){
+        /*
+        TODO: Change the variable "numFuzzers" below to increase the number of Fuzzed outputs
+         */
+
+        int numFuzzers = 1000;
+        int [] mutationsArray = new int[numFuzzers];
+        int [] mismatchArray = new int[numFuzzers];
+        for (int i= 0 ; i< numFuzzers; i++){
             System.out.println("\n\nIteration "+ i);
             int numMutations = mutateCsv(file1, i);
             int numMismatches = main.compareInputs(mutatedInput, file2);
-            if (numMutations != numMismatches){
-                System.out.println("Broke your code hahah!");
-                    flag = 1;
-                    break;
+            if (numMutations!=numMismatches){ // you could also do assert (numMutations == numMismatches) here. But I want them to run through all the iterations before giving me an output first
+                flag=1;
             }
+            System.out.println("\nNumber of mismatches: "+ numMismatches + "\nNumber of mutations : "+ numMutations);
         }
         if (flag == 0){
-            System.out.println("\nCode runs perfectly!");
+            System.out.println("\n\n\n\nCode runs perfectly!");
         }
         else{
-            System.out.println("Your code needs refinement as the fuzzer has found an error!");
+            System.out.println("\n\n\n\nYour code needs refinement as the fuzzer has found an error!");
         }
 
 
