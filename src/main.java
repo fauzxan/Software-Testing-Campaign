@@ -9,17 +9,26 @@ public class main {
     public static HashMap<String, String> createHash(File file) throws Exception{ //  this method has a time complexity of O(n), where n is the number of entries in the one of the files
         HashMap<String, String> entry = new HashMap<>();
         Scanner sc = new Scanner(file);
+        int counter = 0;
         while (sc.hasNext()){
-            String line = sc.next();
-            // Key: is the ID of each row- this is the unique identifier
-            // Value: the entire line to be compared
-            entry.put(line.split(",")[0], line);
+            if (counter<3){
+                counter++;
+                sc.next();
+            }
+            else {
+                String line = sc.next();
+                // System.out.println(line);
+                // Key: is the ID of each row- this is the unique identifier
+                // Value: the entire line to be compared
+                entry.put(line.split(",")[0], line);
+            }
+
         }
         sc.close();
         return entry;
     }
 
-    public static void compareInputs(File file1, File file2) throws Exception{
+    public static int compareInputs(File file1, File file2) throws Exception{
         File file = new File ("./output.csv");
         FileWriter fileWriter = new FileWriter(file);
 
@@ -41,6 +50,9 @@ public class main {
 
         Scanner sc2 = new Scanner(file2);
         while (sc2.hasNext()){
+            for (int explainLater = 0; explainLater<3; explainLater++){
+                sc2.next();
+            }
             String lineFromSecondFile = sc2.next();
             String lineKey = lineFromSecondFile.split(",")[0]; // basically the ID, which uniquely identifies each row
 
@@ -51,7 +63,7 @@ public class main {
             }
             // if the key does exist, then...
             else {
-                // ...check if the entries match. If they do, then append it into the new csv file.
+                // ...check if the entries match. If they do not, then append it into the new csv file.
                 String lineFromHashMap = file1Entries.get(lineKey);
                 if (!lineFromHashMap.equals(lineFromSecondFile)){
                     // multiple \n included to improve legibility
@@ -73,7 +85,7 @@ public class main {
         //closing statements
         fileWriter.flush();
         fileWriter.close();
-
+        return count;
     }
 
     public static void main(String[] args) {
@@ -85,7 +97,7 @@ public class main {
         File file2 = new File ("C:\\Users\\fauza\\Desktop\\School stuff\\Elements of Software Construction\\Software Testing Campaign\\Software-Testing-Campaign\\sample_file_3.csv");
         File file1 = new File ("C:\\Users\\fauza\\Desktop\\School stuff\\Elements of Software Construction\\Software Testing Campaign\\Software-Testing-Campaign\\sample_file_1.csv");
         try {
-            compareInputs(file1, file2);
+            int num = compareInputs(file1, file2);
         }catch(Exception e){
             System.out.println("either file not found or the file 'output.csv' is open in another tab!");
         }

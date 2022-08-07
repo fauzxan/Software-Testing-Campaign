@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef14b26e-7287-4f53-9df4-b9b50fdb54f9" name="Changes" comment="" />
+    <list default="true" id="ef14b26e-7287-4f53-9df4-b9b50fdb54f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/input.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Fuzzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.Tests.checkUniqueCustomerIds">
+  <component name="RunManager" selected="Application.main">
     <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main" />
       <module name="Software-Testing-Campaign" />
@@ -105,6 +110,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.main" />
+      <item itemvalue="JUnit.Tests.checkDT" />
+      <item itemvalue="JUnit.Tests.checkOutput" />
+      <item itemvalue="JUnit.Tests.checkUniqueCustomerIds" />
+      <item itemvalue="JUnit.Tests.headerCheck" />
+      <item itemvalue="JUnit.Tests.pathTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Tests.checkUniqueCustomerIds" />
@@ -139,5 +152,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Fuzzer.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
