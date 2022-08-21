@@ -81,3 +81,9 @@ error message will be printed out at the end of fuzzer method.
 The fuzzer was able to find the following errors, that have now been fixed:<br/>
 1. The first few lines of the csv are not read correcly. 
 2. The closing of some write streams were not done correctly
+
+## Week 13 Final Submit
+
+I began by inviting my groupmates as collaborators, and accepting to join their projects. <br>
+After this, I shifted their code to my directory and tried to run their code. It gave the correct ouput as expected while running it with sample_csv1 and sample_csv2. <br>
+However, I ran a test check their code could run by passing the same file, with the same rows, but the columns exchanged. I was able to find a bug in Anthony's code: two csv files with the same content, but differnt columns order, when passed into his system, gave an unexpected output.
