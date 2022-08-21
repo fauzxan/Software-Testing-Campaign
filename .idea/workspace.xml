@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef14b26e-7287-4f53-9df4-b9b50fdb54f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Anthony_Sol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Anthony_test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.csv" beforeDir="false" afterPath="$PROJECT_DIR$/output.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +52,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Fuzzer">
-    <configuration name="Fuzzer" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Fuzzer" />
+  <component name="RunManager" selected="JUnit.Anthony_test.ColumnExchangeTest">
+    <configuration name="Anthony_Sol" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Anthony_Sol" />
       <module name="Software-Testing-Campaign" />
       <option name="PROGRAM_PARAMETERS" value="'C:\Users\fauza\Desktop\School stuff\Elements of Software Construction\Software Testing Campaign\sample_file_3.csv'$FileDir$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Anthony_test.ColumnExchangeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Software-Testing-Campaign" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Anthony_test" />
+      <option name="METHOD_NAME" value="ColumnExchangeTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -62,16 +76,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Tests" />
       <option name="METHOD_NAME" value="checkDT" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tests.checkOutput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Software-Testing-Campaign" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tests" />
-      <option name="METHOD_NAME" value="checkOutput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,20 +112,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Fuzzer" />
+      <item itemvalue="Application.Anthony_Sol" />
       <item itemvalue="JUnit.Tests.checkDT" />
-      <item itemvalue="JUnit.Tests.checkOutput" />
       <item itemvalue="JUnit.Tests.checkUniqueCustomerIds" />
       <item itemvalue="JUnit.Tests.headerCheck" />
       <item itemvalue="JUnit.Tests.pathTest" />
+      <item itemvalue="JUnit.Anthony_test.ColumnExchangeTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Anthony_test.ColumnExchangeTest" />
         <item itemvalue="JUnit.Tests.checkUniqueCustomerIds" />
         <item itemvalue="JUnit.Tests.checkDT" />
         <item itemvalue="JUnit.Tests.headerCheck" />
         <item itemvalue="JUnit.Tests.pathTest" />
-        <item itemvalue="JUnit.Tests.checkOutput" />
       </list>
     </recent_temporary>
   </component>
